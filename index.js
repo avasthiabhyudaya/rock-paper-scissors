@@ -7,7 +7,8 @@ scores = document.querySelector(".score")
 
 pc = 0;
 user = 0;
-round = 1;
+round = 0;
+
 
 rock.addEventListener("click", function(){
 game("rock");
@@ -35,7 +36,6 @@ function computerPlay()
 
 function playRound(playerSelection, computerSelection)
 {
-
 	switch(playerSelection)
 	{
 		case "rock":
@@ -119,27 +119,35 @@ function score(user, pc)
 	{
 		result.innerText = `This game is a tie`;
 	}
-	round = 1;
-	pc = 0;
-	user = 0;
+
 }
 
 
 function game(player_choice)
-{		
+{	
+	if(round == 0)
+	{
+		result.innerText = ` `;
+	}	
 	round++;
 	computer_choice = computerPlay();
 	playRound(player_choice, computer_choice);
 	scores.innerText = `Score:
+	Round: "${round}"
 	PC :"${pc}"
  	User : "${user}"`;
 
  	if(pc == 5 || user == 5)
 	{
  		score(user, pc);
+ 		round = 0;
+		pc = 0;
+		user = 0;
  	}
 
 }
 
-
+//the problem with the code currently is that after completion of rounds the result text still remains and only changes when
+//something else comes but what we want instead is to clear the whole thing when a new game begins
+//problem solved by putting if condition inside the game function
 
