@@ -7,8 +7,6 @@ This is my first **HTML/CSS/JS** project. **Live version** of the game is availa
 * Learned how to color the **console text**.
 * Enjoyed stylizing the **prompt** and **console texts**.
 
-![Game in the browser console](./images/console-image.png)
-
 ### Second stage | Game with added UI
 **The benefits I got from this stage:**
 * Learned to use and modify **[Font Awesome Icons](https://fontawesome.com/)**.
@@ -22,3 +20,6 @@ This is my first **HTML/CSS/JS** project. **Live version** of the game is availa
 * The game has a **responsive layout**.
 * The game is **fully playable** in the browser window.
 * I really tried to keep **readable and understandable code**, **short functions**, **descriptive names** and tried to add a smooth feel to the game.
+
+
+![Game in the browser console](./images/console-image.png)
