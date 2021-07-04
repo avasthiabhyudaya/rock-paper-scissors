@@ -1,13 +1,36 @@
-rock = document.querySelector(".rock")
-paper = document.querySelector(".paper")
-scissors = document.querySelector(".scissors")
-round_result = document.querySelector(".round_result")
-result = document.querySelector(".result")
-scores = document.querySelector(".score")
+rock = document.querySelector(".rock");
+paper = document.querySelector(".paper");
+scissors = document.querySelector(".scissors");
+round_result = document.querySelector(".round_result");
+result = document.querySelector(".result");
+scores = document.querySelector(".score");
+pc_score = document.querySelector(".divCell_pc");
+user_score = document.querySelector(".divCell_user");
+slider = document.querySelector(".slider");
+
+var audio_win = new Audio('./audio/win.mp3')
+
+var audio_lose = new Audio('./audio/loss.mp3')
+
+slider.addEventListener('click',mutePage);
 
 pc = 0;
 user = 0;
 round = 0;
+
+var f = 0;//when it is 0 that means no sound
+
+pc_score.innerText = pc;
+user_score.innerText = user;
+
+let music = new Audio();
+
+scores.innerText = "Round : " +round; 
+
+pc_score.setAttribute(
+   "style", "font-size: 30px; color: white;");
+user_score.setAttribute(
+   "style", "font-size: 30px; color: white;");
 
 rock.addEventListener("click", function(){
 game("rock");
@@ -107,12 +130,22 @@ function score(user, pc)
 
 	if(user > pc)
 	{
+		music = audio_win;
 		result.innerText = `You win the game`;
+		if(f==1)
+		{
+			music.play();
+		}
 	}
 
 	else if(pc > user)
 	{
 		result.innerText = `PC wins the game`;
+		music = audio_lose;
+		if(f==1)
+		{
+			music.play();
+		}
 	}
 	else
 	{
@@ -121,20 +154,27 @@ function score(user, pc)
 
 }
 
+function mutePage()
+{
+	f = !f;
+}
+
 
 function game(player_choice)
 {	
 	if(round == 0)
 	{
+		music.currentTime = 0;
+		music.pause();
 		result.innerText = ` `;
 	}	
 	round++;
 	computer_choice = computerPlay();
 	playRound(player_choice, computer_choice);
-	scores.innerText = `Score:
-	Round: "${round}"
-	PC :"${pc}"
- 	User : "${user}"`;
+	scores.innerText = "Round : " +round;;
+ 	pc_score.innerText = pc;
+	user_score.innerText = user;
+
 
  	if(pc == 5 || user == 5)
 	{
@@ -142,6 +182,8 @@ function game(player_choice)
  		round = 0;
 		pc = 0;
 		user = 0;
+		pc_score.innerText = pc;
+		user_score.innerText = user;
  	}
 
 }

@@ -1,2 +1,8 @@
-1. Present score to shown in a table format
-2. Winning and losing music both for rounds and overall game
+1. Present score to shown in a table format - only middle line isn't done
+2. Winning and losing music both for rounds - done
+3. button click animation - reduce size and adjust shadow - done
+4. Column division in the table
+
+
+Mute button audio only plays throughout the game if unmuted (slider button)
+Dark mode : change box shadow color of boxes and text and background color of background to white and all the texts to black

@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<label class="switch">
+  			<input type="checkbox">
+  			<span class="slider round"></span>
+		</label>
+		<div class = "sound">Sound : </div>
+	</head>
 	<body>
-		<div>
-		      <div class="divTable">
-             <div class="headRow">
-                <div class="divCell" align="center">PC</div>
-                <div  class="divCell" align="center">User</div>
-             </div>
-            <div class="divRow">
-                <div class="divCell" align="center">001</div>
-                <div class="divCell" align="center">002</div>
-            </div>
-      </div>
-		<div class = "score_table"></div>
+		<header class = 'title'>ROCK-PAPER-SCISSORS</header>
+		<div class = 'table_container'>
+		     <div class="divTable">
+             	<div class="headRow">
+                	<div class="divCell" align="center">PC</div>
+                	<div class="divCell" align="center">User</div>
+             	</div>
+           		<div class="divRow">
+                	<div class="divCell_pc" align="center"></div>
+                	<div class="divCell_user" align="center"></div>
+            	</div>
+    		</div>
+    	</div>
 		<div class = "score"></div>
 		<div class = "round_result"></div>
 		<div class = "result"></div>
@@ -20,7 +28,7 @@
 			<button class="rock"><img class = "rock_img" src ="https://i.natgeofe.com/k/ab1c0ce9-21ea-4543-891a-ff496845b0cf/geology-igneous.jpg" height="200"  width = "200"/></button>
 			<button class="paper"><img class = "paper_img" src ="https://media.istockphoto.com/photos/junk-or-crumpled-sheet-of-blank-paper-in-ball-shape-picture-id186289371" height="200" width="200"/></button>
 			<button class="scissors"><img class = "scissor_img" src = "https://thumbs.dreamstime.com/b/scissors-icon-black-isolated-white-87666334.jpg" height="200" width = "200"></button>
-		<div>
+		</div>
 	</body>
 	<script type = "text/javascript" src = "index.js"></script>
 	<link rel="stylesheet" href="index.css">
