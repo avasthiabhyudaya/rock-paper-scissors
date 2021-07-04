@@ -15,6 +15,7 @@ This is my first **HTML/CSS/JS** project. **Live version** of the game is availa
 * Improved my **understanding of JavaScript functions** (organization, workspaces, scopes, calling, invoking, breaking down into smaller ones..).
 * Learned how to create and use Slider buttons.
 * Learned how to use sound and enable and disable it using the slider button.
+* Learned how to use box and text shadows in transitions.
 
 ### Summary
 * The game has a **responsive layout**.
