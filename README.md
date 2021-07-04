@@ -7,7 +7,7 @@ This is my first **HTML/CSS/JS** project. **Live version** of the game is availa
 * Learned how to color the **console text**.
 * Enjoyed stylizing the **prompt** and **console texts**.
 
-![Game in the browser console](./images/console-game.png)
+![Game in the browser console](./images/console-image.png)
 
 ### Second stage | Game with added UI
 **The benefits I got from this stage:**
