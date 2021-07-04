@@ -9,7 +9,6 @@ pc = 0;
 user = 0;
 round = 0;
 
-
 rock.addEventListener("click", function(){
 game("rock");
 });
@@ -150,4 +149,3 @@ function game(player_choice)
 //the problem with the code currently is that after completion of rounds the result text still remains and only changes when
 //something else comes but what we want instead is to clear the whole thing when a new game begins
 //problem solved by putting if condition inside the game function
-

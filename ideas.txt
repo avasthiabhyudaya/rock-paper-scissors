@@ -1,0 +1,2 @@
+1. Present score to shown in a table format
+2. Winning and losing music both for rounds and overall game
